@@ -3,8 +3,15 @@ on:
   workflow_dispatch:
 
 jobs:
-  Explore-GitHub-Actions:
-    # You need to use the INSTALLATION_NAME from the previous step
+  container-test-job:
     runs-on: linux-cpu-large
+    container:
+      image: node:18
+      env:
+        NODE_ENV: development
+      ports:
+        - 80
     steps:
-    - run: echo "🎉 This job uses runner scale set runners!"
+      - name: Check for dockerenv file
+        run: (ls /.dockerenv && echo Found dockerenv) || (echo No dockerenv)
+
