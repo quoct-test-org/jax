@@ -1,4 +1,4 @@
-name: Short Build JaxLibs
+name: Quoct Build JaxLibs
 
 # Build every cpu jaxlib and then test it
 
