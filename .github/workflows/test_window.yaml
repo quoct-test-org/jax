@@ -1,0 +1,29 @@
+name: Quoct Windows Test
+
+# Build every cpu jaxlib and then test it
+
+on:
+  # Trigger the workflow on push or pull request,
+  # but only for the main branch
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read  # to fetch code
+  actions: write  # to cancel previous workflows
+
+jobs:
+  build:
+    name: "windows test"
+    runs-on: "quoct-test-windows"
+    container:
+      image: https://mcr.microsoft.com/windows/servercore:ltsc2022
+    timeout-minutes: 60
+    steps:
+    - name: echo
+      run: echo "Hello world"
