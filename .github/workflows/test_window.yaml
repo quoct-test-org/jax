@@ -22,7 +22,7 @@ jobs:
     name: "windows test"
     runs-on: self-hosted
     container:
-      image: mcr.microsoft.com/windows/servercore:ltsc2022
+      image: mcr.microsoft.com/windows/servercore:ltsc2019
     timeout-minutes: 60
     steps:
     - name: echo
