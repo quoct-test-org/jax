@@ -27,5 +27,5 @@ jobs:
     steps:
     - name: echo
       with:
-        entrypoint: po
+        entrypoint: pwsh
         args: "echo 4"
