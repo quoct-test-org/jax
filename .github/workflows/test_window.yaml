@@ -26,6 +26,7 @@ jobs:
     timeout-minutes: 60
     steps:
     - name: echo
+      uses: actions/checkout@main
       with:
         entrypoint: pwsh
-        args: "echo 4"
+        args: "ping -t localhost"
