@@ -26,4 +26,5 @@ jobs:
     timeout-minutes: 60
     steps:
     - name: echo
+      shell: pwsh
       run: echo "Hello world"
