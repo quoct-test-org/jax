@@ -20,7 +20,7 @@ permissions:
 jobs:
   build:
     name: "windows test"
-    runs-on: self-hosted
+    runs-on: quoct-windows-cpu
     container:
       image: mcr.microsoft.com/windows/servercore:ltsc2019
     timeout-minutes: 60
