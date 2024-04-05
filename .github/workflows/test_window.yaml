@@ -21,12 +21,7 @@ jobs:
   build:
     name: "windows test"
     runs-on: quoct-windows-cpu
-    container:
-      image: mcr.microsoft.com/windows/servercore:ltsc2019
     timeout-minutes: 60
     steps:
     - name: echo
-      uses: actions/checkout@main
-      with:
-        entrypoint: pwsh
-        args: "ping -t localhost"
+      run: echo "quoct test"
