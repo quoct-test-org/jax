@@ -17,7 +17,7 @@ jobs:
     name: "build CUDA"
     runs-on: "quoct-linux-gpu"
     container:
-        image: tensorflow/build:latest-python3.12
+        image: nvidia/cuda:12.3.1-devel-ubuntu20.04
     timeout-minutes: 60
     steps:
     - name: Run tests
