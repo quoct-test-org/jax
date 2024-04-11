@@ -1,0 +1,26 @@
+name: Quoct Test GPU
+on:
+  # Trigger the workflow on push or pull request,
+  # but only for the main branch
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+permissions:
+  contents: read  # to fetch code
+  actions: write  # to cancel previous workflows
+jobs:
+  build:
+    name: "build CUDA"
+    runs-on: "quoct-linux-gpu"
+    container:
+        image: tensorflow/build:latest-python3.12
+    timeout-minutes: 60
+    steps:
+    - name: Run tests
+      run: |
+        uname -a
+        nvidia-smi
