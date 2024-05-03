@@ -30,13 +30,13 @@ jobs:
         include:
           - name-prefix: "with 3.9"
             python-version: "3.9"
-            os: arc-linux-cpu-small
+            os: linux-cpu-small
             enable-x64: 1
             prng-upgrade: 1
             num_generated_cases: 1
           - name-prefix: "with 3.12"
             python-version: "3.12"
-            os: arc-linux-cpu-medium
+            os: linux-cpu-medium
             enable-x64: 0
             prng-upgrade: 0
             num_generated_cases: 1
